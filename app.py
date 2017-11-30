@@ -19,7 +19,7 @@ def upload_file_1():
 def upload_filter():
    if request.method == 'POST':
 	  img = request.get_data()
-	  subprocess.call('python CLI_artistic_CNN_2.0.py %d' % int(img), shell=True)
+	  subprocess.call('python CLI_artistic_CNN_3.0.py %d' % int(img), shell=True)
 	  root_dir = app.root_path
 	  return send_from_directory(os.path.join(root_dir), 'result_at_iteration_4.png')
 
